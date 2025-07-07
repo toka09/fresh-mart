@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+@import "tailwindcss";
+:root {
+  --text-color-main: #21313c;
+  --text-color-main-alt: #5c6c75;
+  --main-color: #0aad0a;
+  --light-color: #f0f3f2;
+  --shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+    rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+    rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+  --font-family: "Encode Sans Expanded", sans-serif;
+  
+  --rating-color: #ffc908;
+  --main-color-alt: #0ad10a;
+}
+
+
+body {
+  font-family: var(--font-family) !important;
+  color: var(--text-color-main-alt);
+}
+.rating-color {
+  color: var(--rating-color);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.font-sm {
+  font-size: 14px;
+}
+.text-main {
+  color: var(--main-color);
+}
+.text-color {
+  color: var(--text-color-main-alt);
+}
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+.bg-main-dark {
+  background-color: var(--text-color-main) !important;
+}
+.bg-main-alt {
+  background-color: var(--main-color-alt) !important;
+}
+
+.bg-main-light {
+  background-color: var(--light-color) !important;
+}
+.title-main {
+  color: var(--text-color-main);
+}
+.offline {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  padding: 3px;
+  color: #fff;
+  z-index: 2000;
+}
+.footer ,footer:hover{
+  
+  color: #0aad0a;
+}

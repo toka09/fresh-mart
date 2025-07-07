@@ -1,0 +1,46 @@
+.products {
+  background-color: #fff;
+}
+.product {
+  border: solid 1px transparent;
+}
+.product:hover {
+  border-color: rgb(56, 56, 56);
+}
+.product .btn-add {
+  transition: transform 0.3s, opacity 0.3s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.product:hover .btn-add {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.product .overlay {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.product:hover .overlay {
+  opacity: 1;
+}
+.product .btn-wishlist {
+  top: 5%;
+  left: 5%;
+  background-color: #fff;
+  border: 1px solid #dfe2e1;
+  color: #c81212;
+  transition: 0.3s;
+}
+.product .btn-wishlist:hover {
+  color: #f30a0a;
+}
+.product .btn-view {
+  bottom: 22%;
+  right: 5%;
+  background-color: #fff;
+  color: #000000;
+  transition: 0.3s;
+}
+.product .btn-view:hover {
+  color: #090909;
+}
