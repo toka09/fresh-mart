@@ -51,9 +51,8 @@ export default function Cart() {
         <title>FreshCart-Cart</title>
         <meta name="keywords" content="FreshCart-Ecommerce-Cart/#" />
       </Helmet>
-      <section className="cart my-5 py-5 px-3 px-md-0 ">
+      <section className="cart my-5  px-3 px-md-0 ">
         <div className="container bg-main-light rounded-2 py-5 px-3 my-5 ">
-          <h2 className="title-main text-center fw-bold mb-4">Shop Cart</h2>
           <div className="d-flex justify-content-between  flex-column flex-md-row mb-3">
             <p className="fw-semibold my-2">
               Total Cart Price:

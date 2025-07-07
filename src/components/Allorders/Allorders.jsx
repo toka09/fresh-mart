@@ -50,9 +50,9 @@ export default function Allorders() {
           content="FreshCart-Ecommerce-Categories-Products"
         />
       </Helmet>
-      <section className="my-5 py-2 px-3 px-md-0">
+      <section className="my-5  px-3 px-md-0">
         <div className="container bg-main-light rounded-2 py-5 px-4 my-2 ">
-          <h2 className="title-main text-center fw-bold mb-4">All Orders</h2>
+          <h2 className="title-main text-center fw-bold mb-4">Your Orders</h2>
           <p className="fw-semibold my-2">
             Number of Orders:
             <span className="text-main mx-1">{allOrders?.length}</span>

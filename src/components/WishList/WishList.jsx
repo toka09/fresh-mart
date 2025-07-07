@@ -34,9 +34,9 @@ export default function WishList() {
         <title>WishList</title>
         <meta name="keywords" content="Ecommerce-WishList" />
       </Helmet>
-      <section className=" my-5 py-5  px-3 px-md-0">
+      <section className=" my-5 px-3 px-md-0">
         <div className="container bg-main-light rounded-2 py-5 px-3 my-5">
-          <h2 className="title-main text-center fw-bold mb-4">WishList</h2>
+          <h2 className="title-main text-center fw-bold mb-4">You liked</h2>
           <p className="fw-semibold my-2">
             Products in wishlist:
             <span className="text-main mx-1">{wishList?.length}</span>
