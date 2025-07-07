@@ -15,7 +15,6 @@ import WishlistContextProvider from './Context/WishlistContext';
 import OrderContextProvider from './Context/OrderContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 let query = new QueryClient();
 root.render(
   <TokenContextProvider>
