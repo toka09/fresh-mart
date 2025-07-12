@@ -54,9 +54,11 @@ export default function Footer() {
                 <Link to="/brands" className="footer text-gray-600  hover:text-white dark:text-gray-400 dark:hover:text-main-light transition-colors">
                   brands
                 </Link>
+                <li>
                 <Link to="/allorders" className="footer text-gray-600  hover:text-white dark:text-gray-400 dark:hover:text-main-light transition-colors">
-                  brands
+                  allorders
                 </Link>
+                </li>
               </li>
             </ul>
           </div>
