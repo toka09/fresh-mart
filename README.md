@@ -1,12 +1,50 @@
-# React + Vite
+# 🛒 E-commerce Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive and dynamic **E-commerce application** built with **React**, **React Router**, **Axios**, and styled using **Tailwind CSS**.  
+It includes essential features such as product browsing, user authentication, shopping cart functionality, and API integration.
 
-Currently, two official plugins are available:
+📍 **Live Demo**: [https://toka09.github.io/fresh-mart/](https://toka09.github.io/fresh-mart/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 **User Authentication**
+  - Sign up, login, and token handling
+- 🛍️ **Product Browsing**
+  - Responsive product grid, detail pages
+- 🛒 **Shopping Cart**
+  - Add/remove items, view total price
+- 🧭 **Routing**
+  - Protected routes with React Router
+- 🎨 **Modern UI**
+  - Built with Tailwind CSS
+- 🔗 **API Integration**
+  - Dynamic data using Axios
+- 🧠 **Form Validation**
+  - Using Yup + Formik
+- 📦 **Smooth UX**
+  - Includes loading spinners, notifications, and slick sliders
+
+---
+
+## 🔧 Tech Used
+
+| Category           | Technology / Library                        |
+|--------------------|---------------------------------------------|
+| **Frontend**       | React, JSX                                  |
+| **Routing**        | React Router DOM                            |
+| **Styling**        | Tailwind CSS, Bootstrap                     |
+| **Forms**          | Formik, Yup                                 |
+| **API**            | Axios                                       |
+| **Notifications**  | React Hot Toast                             |
+| **Auth**           | JWT Decode                                  |
+| **Offline Detect** | React Detect Offline                        |
+| **Loading**        | React Loader Spinner                        |
+| **Carousel**       | Slick Carousel                              |
+| **Meta Tags**      | React Helmet                                |
+| **Icons**          | Font Awesome                                |
+| **Deployment**     | GitHub Pages, gh-pages                      |
+| **Scaffold Tool**  | Generate React CLI                          |
+
+
