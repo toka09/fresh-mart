@@ -48,6 +48,8 @@ export default function Address() {
     if (values.paymentMethod === "credit_card") {
       // handle pay order by credit card.
       let {data} = await payByCreditCard(cartId, values);
+      console.log(data)
+      
       if (data?.status === "success") {
         window.location.href=data.session?.url;
       } else {
