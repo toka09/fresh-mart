@@ -82,11 +82,11 @@ async function payByCash(cartId, shippingAddress) {
     .catch((err) => err.message);
 }
 async function payByCreditCard(cartId, shippingAddress) {
-  const encodedRedirectUrl = encodeURIComponent(`${window.location.origin}/#/allorders`);
-  
+  const redirectUrl = encodeURIComponent(`${window.location.origin}/stripe-redirect.html`);
+
   return axios
     .post(
-      `${baseUrl}/orders/checkout-session/${cartId}?url=${encodedRedirectUrl}`,
+      `${baseUrl}/orders/checkout-session/${cartId}?url=${redirectUrl}`,
       { shippingAddress },
       {
         headers: {
@@ -97,6 +97,7 @@ async function payByCreditCard(cartId, shippingAddress) {
     .then((data) => data)
     .catch((err) => err);
 }
+
 
 export default function CartContextProvider({ children }) {
   const [cartCounter, setCartCounter] = useState(0);
