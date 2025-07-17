@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import HomePage from "./components/HomePage/HomePage";
-import {createBrowserRouter  ,RouterProvider} from "react-router-dom";
+import {createHashRouter ,RouterProvider} from "react-router-dom";
 import { Offline } from "react-detect-offline";
 import AuthLayout from "./Layouts/AuthLayout";
 import MainLayout from "./Layouts/MainLayout";
@@ -35,7 +35,7 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  let routes = createBrowserRouter ([
+  let routes = createHashRouter([
     {
       path: "/",
       element: <MainLayout />,
@@ -123,9 +123,7 @@ export default function App() {
         {
           path: "allorders",
           element: (
-            <ProtectedRoutes>
-              <Allorders />
-            </ProtectedRoutes>
+              <Allorders/>
           ),
         },
         {
