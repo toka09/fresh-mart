@@ -81,35 +81,23 @@ async function payByCash(cartId, shippingAddress) {
     .then((data) => data)
     .catch((err) => err.message);
 }
-
 async function payByCreditCard(cartId, shippingAddress) {
-  const redirectUrl = `${window.location.origin}/order-success`;
-  
-  try {
-    const response = await axios.post(
-      `${baseUrl}/orders/checkout-session/${cartId}?url=${encodeURIComponent(redirectUrl)}`,
+  return axios
+    .post(
+      `${baseUrl}/orders/checkout-session/${cartId}?url=${window.location.origin}`,
       { shippingAddress },
       {
         headers: {
           token: localStorage.getItem("token"),
         },
       }
-    );
-
-    if (response.data.sessionUrl) {
-      window.location.href = response.data.sessionUrl;
-    }
-    
-    return response;
-  } catch (err) {
-    console.error("Payment error:", err);
-    throw err;
-  }
+    )
+    .then((data) => data)
+    .catch((err) => err);
 }
 
 export default function CartContextProvider({ children }) {
   const [cartCounter, setCartCounter] = useState(0);
-  
   return (
     <cartContext.Provider
       value={{
