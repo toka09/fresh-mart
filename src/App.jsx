@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import HomePage from "./components/HomePage/HomePage";
-import {createHashRouter ,RouterProvider} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Offline } from "react-detect-offline";
+
 import AuthLayout from "./Layouts/AuthLayout";
 import MainLayout from "./Layouts/MainLayout";
 import NotFound from "./components/NotFound/NotFound";
@@ -28,6 +29,7 @@ import ProductDetailsPage from "./components/ProductDetailsPage/ProductDetailsPa
 
 export default function App() {
   let { setToken } = useContext(tokenContext);
+
   useEffect(() => {
     if (localStorage.getItem("token")) {
       setToken(localStorage.getItem("token"));
@@ -35,7 +37,7 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  let routes = createHashRouter([
+  let routes = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout />,
@@ -123,7 +125,9 @@ export default function App() {
         {
           path: "allorders",
           element: (
-              <Allorders/>
+            <ProtectedRoutes>
+              <Allorders />
+            </ProtectedRoutes>
           ),
         },
         {
@@ -135,7 +139,7 @@ export default function App() {
           ),
         },
         {
-          path: "wishlist",
+          path: "whishlist",
           element: (
             <ProtectedRoutes>
               <WishList />
@@ -144,7 +148,7 @@ export default function App() {
         },
         {
           path: "*",
-          element: <NotFound/>,
+          element: <NotFound />,
         },
       ],
     },
@@ -205,11 +209,12 @@ export default function App() {
   ]);
   return (
     <>
-      <RouterProvider router={routes}/>
-      <ToastContainer autoClose="1000" position="top-right" stacked hideProgressBar/>
+      <RouterProvider router={routes} />
+      <ToastContainer theme="colored" autoClose="1000" />
+
       <Offline>
         <div className="offline bg-danger">
-          <p className="mb-0">Check Your Connection .</p>
+          <p className="mb-0">You're offline now!</p>
         </div>
       </Offline>
     </>
