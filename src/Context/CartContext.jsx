@@ -82,12 +82,9 @@ async function payByCash(cartId, shippingAddress) {
     .catch((err) => err.message);
 }
 async function payByCreditCard(cartId, shippingAddress) {
-  const redirectUrl = `${window.location.origin}/stripe-redirect.html`;
-  const encodedRedirectUrl = encodeURIComponent(redirectUrl);
-
   return axios
     .post(
-      `${baseUrl}/orders/checkout-session/${cartId}?url=${encodedRedirectUrl}`,
+      `${baseUrl}/orders/checkout-session/${cartId}?url=${window.location.origin}/#/allorders`,
       { shippingAddress },
       {
         headers: {
