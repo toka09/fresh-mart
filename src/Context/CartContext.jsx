@@ -82,8 +82,7 @@ async function payByCash(cartId, shippingAddress) {
     .catch((err) => err.message);
 }
 async function payByCreditCard(cartId, shippingAddress) {
-  const redirectUrl = `${window.location.origin}/fresh-mart/stripe-redirect.html`;
-
+  const redirectUrl = encodeURIComponent("https://toka09.github.io/fresh-mart/stripe-redirect.html");
   
   return axios
     .post(
