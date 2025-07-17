@@ -123,9 +123,7 @@ export default function App() {
         {
           path: "allorders",
           element: (
-            <ProtectedRoutes>
               <Allorders/>
-            </ProtectedRoutes>
           ),
         },
         {

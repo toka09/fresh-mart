@@ -82,9 +82,11 @@ async function payByCash(cartId, shippingAddress) {
     .catch((err) => err.message);
 }
 async function payByCreditCard(cartId, shippingAddress) {
+  const redirectUrl = `${window.location.origin}/fresh-mart/stripe-redirect.html`;
+
   return axios
     .post(
-      `${baseUrl}/orders/checkout-session/${cartId}?url=${window.location.origin}`,
+      `${baseUrl}/orders/checkout-session/${cartId}?url=${redirectUrl}`,
       { shippingAddress },
       {
         headers: {
